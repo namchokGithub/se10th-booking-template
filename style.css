@@ -1,0 +1,73 @@
+/* .zone table,.zone td {
+    border: 1px solid black;
+    border-collapse: collapse;
+} */
+
+/* .table_in_zone , td{
+    border: 1px solid black;
+    border-collapse: collapse;
+} */
+
+/* table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+} */
+
+.legend p{
+    margin-right: 5%;
+}
+
+img{
+    width:17px;
+}
+
+/* table img{
+    /* เอาไว้ใช้ถ้าโต๊ะนั้นไม่ให้เลือก  */
+    /* opacity: 0.5; */
+/* } */
+
+.sub {
+    opacity: 1;
+}
+
+.container{
+    /* margin-top: 10%; */
+    overflow-x:auto;
+}
+
+table{
+    width: 100%;
+}
+
+td,th{
+    text-align: center;
+    height:40px;
+}
+
+td:active {
+    background-color: lightpink;
+}
+
+.stage{
+    margin: auto;
+    height: 65%;
+    width: 30%;
+    background-color: rgb(255, 187, 0);
+}
+
+.jumbotron{
+    padding-bottom: 5%;
+}
+
+.btn{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.summary_container{
+    padding: 5%;
+}
+
+.summary_title{
+    font-size: 150%;
+}
