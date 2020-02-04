@@ -55,7 +55,7 @@
                 },
                 dataType: "json",
                 success: function(data) {
-                    console.log(data)
+                    // console.log(data)
                     if (data) {
                         $('.modal-body').append(
                             `<h5 class="mb-4">ชื่อโต๊ะ: ${$('#table-name').text()}</h5>`

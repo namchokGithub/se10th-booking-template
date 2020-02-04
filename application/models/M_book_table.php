@@ -29,6 +29,9 @@ class M_book_table extends CI_Model {
 		return $result;
 	}
 
+	// Update by Namechok
+	// 2020-02-04
+	// Show name without space between name and prefix
 	function getTableMember(){
 		$sql='	SELECT CONCAT(pf_name,gu_fname," ",gu_lname) AS name
 				FROM book_table
