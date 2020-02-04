@@ -30,7 +30,7 @@ class M_book_table extends CI_Model {
 	}
 
 	function getTableMember(){
-		$sql='	SELECT CONCAT(pf_name," ",gu_fname," ",gu_lname) AS name
+		$sql='	SELECT CONCAT(pf_name,gu_fname," ",gu_lname) AS name
 				FROM book_table
 				LEFT JOIN guest ON gu_tb_id = tb_id
 				LEFT JOIN prefix ON gu_pf_id = pf_id

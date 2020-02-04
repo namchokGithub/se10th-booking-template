@@ -43,7 +43,7 @@
         //2019-12-14 21:44 Athiruj
         $(document).on('click', '.btn-table-detail', function() {
             $('.modal-body').empty();
-            // รอ
+
             // var tableName = $($(this).children('input')).val()
             $('#table-id').text(`${this.id}`);
 
@@ -55,6 +55,7 @@
                 },
                 dataType: "json",
                 success: function(data) {
+                    console.log(data)
                     if (data) {
                         $('.modal-body').append(
                             `<h5 class="mb-4">ชื่อโต๊ะ: ${$('#table-name').text()}</h5>`
