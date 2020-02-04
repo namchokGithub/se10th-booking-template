@@ -163,7 +163,7 @@
 
                     <div class="pr-5">
                         <div class="float-right">
-                            <button type="submit" class="btn g-scooter btn-save">บันทึก</button>
+                            <button id="submit" class="btn g-scooter btn-save">บันทึก</button>
                         </div>
                     </div>
                 </div>      
@@ -176,13 +176,13 @@
                         
                         <div class="form-group col-md-3" id="year">
                             <select class="form-control">
-                                <option value="11" disabled selected> ชั้นปี </option>
-                                <option value="62"> ชั้นปีที่ 1 </option>
-                                <option value="61"> ชั้นปีที่ 2 </option>
-                                <option value="60"> ชั้นปีที่ 3 </option>
-                                <option value="59"> ชั้นปีที่ 4 </option>
-                                <option value="99"> ศิษย์เก่า </option>
-                                <option value="00"> อาจารย์ </option>
+                                <option value="9" > ชั้นปี </option>
+                                <option value="2"> ชั้นปีที่ 1 </option>
+                                <option value="3"> ชั้นปีที่ 2 </option>
+                                <option value="4"> ชั้นปีที่ 3 </option>
+                                <option value="5"> ชั้นปีที่ 4 </option>
+                                <option value="6" selected> ศิษย์เก่า </option>
+                                <option value="1"> อาจารย์ </option>
                             </select>
                         </div>
     

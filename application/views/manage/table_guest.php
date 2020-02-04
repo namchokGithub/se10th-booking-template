@@ -39,13 +39,13 @@
 
     <div class="form-group col-md-3" id="year_guest_status">
         <select class="form-control">
-            <option value="11" selected> ชั้นปี </option>
-            <option value="62"> ชั้นปีที่ 1 </option>
-            <option value="61"> ชั้นปีที่ 2 </option>
-            <option value="60"> ชั้นปีที่ 3 </option>
-            <option value="59"> ชั้นปีที่ 4 </option>
-            <option value="99"> ศิษย์เก่า </option>
-            <option value="00"> อาจารย์ </option>
+            <option value="9" selected> ชั้นปี </option>
+            <option value="2"> ชั้นปีที่ 1 </option>
+            <option value="3"> ชั้นปีที่ 2 </option>
+            <option value="4"> ชั้นปีที่ 3 </option>
+            <option value="5"> ชั้นปีที่ 4 </option>
+            <option value="6"> ศิษย์เก่า </option>
+            <option value="1"> อาจารย์ </option>
         </select>
     </div>
     

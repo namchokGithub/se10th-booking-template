@@ -43,9 +43,12 @@ class M_manage extends CI_Model {
 						,gu_std_id as std_id
 						,gu_ct_id
 						,gu_tb_id 
+						,gu_ty as guest_type_id
+						,gu_ty_name as guest_type_name
 						
 				FROM guest
 				LEFT JOIN prefix on prefix.pf_id = guest.gu_pf_id
+				LEFT JOIN guest_type on guest_type.gu_ty_id = guest.gu_ty
 				WHERE gu_tb_id IS NULL";
 		$result = $this->db->query($sql);
 		return $result;
@@ -60,9 +63,12 @@ class M_manage extends CI_Model {
 						,gu_ct_id
 						,gu_tb_id 
 						,tb_name as name_table 
+						,gu_ty as guest_type_id
+						,gu_ty_name as guest_type_name
 						
 				FROM guest
 				LEFT JOIN prefix on prefix.pf_id = guest.gu_pf_id
+				LEFT JOIN guest_type on guest_type.gu_ty_id = guest.gu_ty
 				LEFT JOIN book_table on book_table.tb_id = guest.gu_tb_id";
 		$result = $this->db->query($sql);
 		return $result;

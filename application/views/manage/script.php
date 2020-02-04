@@ -15,6 +15,7 @@
         // console.log(guest)
         // console.log(guest_all)
 
+        show_table_guest()
         show_table_guest_status()
         show_prefix()
 
@@ -102,7 +103,32 @@
         let tbody = ""
 
         for(i in guest_all){
-            if(type==guest_all[i].std_id.substring(0,2) || type=="11"){
+            if(type==guest_all[i].guest_type_id){
+                tbody += `<tr>`
+
+                tbody += `<td class="text-center index_guest_status"></td>`
+                tbody += `<td class="text-left">`
+                tbody += `${guest_all[i].name_guest}`
+                tbody += `</td>`
+
+                if(guest_all[i].name_table){
+                    tbody += `<td class="text-left">`
+                    tbody += `${guest_all[i].name_table}`
+                    tbody += `</td>`
+                    tbody += `<td>`
+                    tbody += `<a class="btn g-yellow">ยกเลิก</a>`
+                    tbody += `</td>`
+                }else{
+                    tbody += `<td>`
+                    tbody += 'ไม่มีที่นั่ง'
+                    tbody += `</td>`
+                    tbody += `<td>`
+                    tbody += `<a class="btn g-blue disabled">ไม่พบข้อมูล</a>`
+                    tbody += `</td>`
+                }
+
+                tbody += `</tr>`
+            }else if(type=="9") {
                 tbody += `<tr>`
 
                 tbody += `<td class="text-center index_guest_status"></td>`
@@ -311,7 +337,7 @@
     function show_prefix(){
         get_prefix()
         let select = ""
-        console.log(prefix)
+        // console.log(prefix)
 
         select += '<option disable selected value="0">คำนำหน้า</option>'
 
@@ -377,13 +403,19 @@
         let tb = ""
         let year = $('#year > select').val();
         let i = 0
-
+        // console.log(guest)
         for(index in guest){
-            if(year == guest[index].std_id.substring(0, 2)){
+            if(year == guest[index].guest_type_id){
                 tb += '<tr>'
                 tb += '<td class="text-center" width="10%">'+(++i)+'</td>'
-                tb += '<td class="" width="50%">'+guest[index].name_guest+'</td>'
-                tb += '<td class="text-center" width="30%"><a class="btn g-yellow" onclick="add_guest('+guest[index].gu_id+')">เพิ่ม</a></td>'
+                tb += '<td class="text-left" width="50%">'+guest[index].name_guest+'</td>'
+                tb += '<td class="" width="30%"><a class="btn g-yellow" onclick="add_guest('+guest[index].gu_id+')">เพิ่ม</a></td>'
+                tb += '</tr>'
+            }else if(year == '9'){
+                tb += '<tr>'
+                tb += '<td class="text-center" width="10%">'+(++i)+'</td>'
+                tb += '<td class="text-left" width="50%">'+guest[index].name_guest+'</td>'
+                tb += '<td class="" width="30%"><a class="btn g-yellow" onclick="add_guest('+guest[index].gu_id+')">เพิ่ม (ทั้งหมด)</a></td>'
                 tb += '</tr>'
             }
         }
